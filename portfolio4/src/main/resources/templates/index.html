@@ -1,0 +1,130 @@
+ 
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Amit Mohan Shukla's Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{/js/javascript.js}"></script>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 right-0 p-4 bg-gray-800 text-white flex justify-between items-center shadow-lg z-10">
+        <h1 class="text-3xl font-bold">Amit Mohan Shukla</h1>
+        <nav class="space-x-4">
+            <a href="#about" class="p-2 hover:text-gray-400 smooth-scroll">About Me</a>
+            <a href="#experience" class="p-2 hover:text-gray-400 smooth-scroll">Experience</a>
+            <a href="#projects" class="p-2 hover:text-gray-400 smooth-scroll">Projects</a>
+            <a href="#skills" class="p-2 hover:text-gray-400 smooth-scroll">Skills</a>
+            <a href="#contact" class="p-2 hover:text-gray-400 smooth-scroll">Contact</a>
+            <button id="resume-btn" class="p-2 bg-blue-500 rounded hover:bg-blue-400">Resume</button>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="p-10 text-center mt-20">
+        <h2 class="text-4xl font-bold">About Me</h2>
+        <img src="/images/profile.jpeg" alt="Profile Photo" class="rounded-full mx-auto mt-4 border-4 border-gray-700" style="width: 200px;">
+        <p class="mt-4 text-lg">I am Amit Mohan Shukla, an enthusiastic developer with expertise in Java, Spring Boot, and web technologies. I am passionate about leveraging technology to solve real-world problems. My academic journey has equipped me with a strong foundation in computer science principles, software development, and problem-solving skills. I have gained hands-on experience through various projects and internships, honing my abilities in programming languages such as Java, and developing a keen interest in Web Development (frontend). As I approach graduation, I am eager to apply my academic knowledge and practical experience to contribute to innovative solutions in the field of computer science.</p>
+        <div class="animate-bounce mt-8">
+            <a href="#projects" class="text-blue-400 hover:text-blue-500 smooth-scroll">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="p-10 bg-gray-800 rounded-lg">
+        <h2 class="text-4xl font-bold">Experience</h2>
+        <div class="mt-4 space-y-4">
+            <div class="bg-gray-700 p-4 rounded">
+                <h3 class="text-2xl font-semibold">Industrial Training on Cybersecurity at Cisco (May 2023 - July 2023)</h3>
+                <p class="mt-2">This training helped me learn network security, threat detection, and data protection.</p>
+            </div>
+            <div class="bg-gray-700 p-4 rounded">
+                <h3 class="text-2xl font-semibold">Employee Form Application</h3>
+                <p class="mt-2">Developed an employee form application using Spring Boot framework with CRUD operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-10">
+        <h2 class="text-4xl font-bold">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+            <div class="bg-gray-700 p-4 rounded">
+                <h3 class="text-2xl font-semibold">Employee Management System</h3>
+                <p class="mt-2">Developed an employee form application using Spring Boot framework. Implemented CRUD operations to enable the creation, retrieval, updating, and deletion of employee records. Integrated the application with a SQL database to securely store and manage employee data. Leveraged Spring Boot's features for dependency injection, MVC architecture, and RESTful web services to enhance application functionality and performance. Ensured data integrity and security through proper validation and exception handling mechanism.</p>
+                <a href="https://github.com/TeerthShukla/projects.git" target="_blank">
+                    <button class="github-btn">View on GitHub</button>
+                </a>
+            </div>
+            <div class="bg-gray-700 p-4 rounded">
+                <h3 class="text-2xl font-semibold">User Login Authentication</h3>
+                <p class="mt-2">A simple API where I handle user registration and login with the help of Spring Boot and MySQL database.</p>
+                <a href="https://github.com/TeerthShukla/projects.git" target="_blank">
+                    <button class="github-btn">View on GitHub</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-10 bg-gray-800 rounded-lg">
+        <h2 class="text-4xl font-bold">Skills</h2>
+        <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4 text-center">
+            <li class="bg-gray-700 p-4 rounded">Java</li>
+            <li class="bg-gray-700 p-4 rounded">Spring Boot</li>
+            <li class="bg-gray-700 p-4 rounded">JavaScript</li>
+            <li class="bg-gray-700 p-4 rounded">HTML & CSS</li>
+            <li class="bg-gray-700 p-4 rounded">JDBC, Servlet & JSP</li>
+            <li class="bg-gray-700 p-4 rounded">SQL Databases</li>
+            <li class="bg-gray-700 p-4 rounded">Software Development Lifecycle</li>
+            <li class="bg-gray-700 p-4 rounded">OOPs</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section with Modal -->
+    <section id="contact" class="p-10">
+        <h2 class="text-4xl font-bold">Contact Me</h2>
+        <button id="contact-btn" class="mt-4 p-2 bg-blue-600 rounded hover:bg-blue-500">Open Contact Form</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="p-4 bg-gray-800 text-white text-center">
+        <p>&copy; 2024 Amit Mohan Shukla</p>
+        <a href="https://github.com/TeerthShukla/projects.git" class="hover:text-gray-400">GitHub</a> |
+        <a href="https://www.linkedin.com/in/amit-mohan-shukla-46a122281" class="hover:text-gray-400">LinkedIn</a>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center z-20">
+        <div class="bg-gray-700 p-8 rounded-lg text-white">
+            <h2 class="text-3xl">My Resume</h2>
+            <div class="resume-box">
+                <a href="/resume/resume.pdf" download="resume.pdf" class="resume-download-btn">Download Resume</a>
+            </div>
+            <button id="resume-close" class="mt-4 p-2 bg-red-600 rounded hover:bg-red-500 block text-center">Close</button>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center z-20">
+        <div class="bg-gray-700 p-8 rounded-lg text-white">
+            <h2 class="text-3xl">Contact Me</h2>
+            <form method="post" action="/submitContact" class="mt-4">
+                <label for="name" class="block text-lg">Name:</label>
+                <input type="text" id="name" name="name" class="p-2 mt-2 bg-gray-800 rounded" required>
+                <label for="email" class="block text-lg mt-4">Email:</label>
+                <input type="email" id="email" name="email" class="p-2 mt-2 bg-gray-800 rounded" required>
+                <label for="message" class="block text-lg mt-4">Message:</label>
+                <textarea id="message" name="message" rows="4" class="p-2 mt-2 bg-gray-800 rounded" required></textarea>
+                <button type="submit" class="p-2 bg-blue-600 mt-4 hover:bg-blue-500 rounded block">Send</button>
+                <button id="contact-close" type="button" class="mt-4 p-2 bg-red-600 rounded hover:bg-red-500 block">Close</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
+ 

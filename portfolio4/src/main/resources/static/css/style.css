@@ -1,0 +1,197 @@
+/* style.css */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #1A202C;
+    color: white;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background-color: #2D3748;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+/* Section Titles */
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Smooth Scroll Links */
+.smooth-scroll {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.smooth-scroll:hover {
+    color: #63B3ED;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #1A202C;
+}
+
+/* Cards and Sections Styling */
+.bg-gray-700 {
+    background-color: #2D3748;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+.bg-gray-700:hover {
+    transform: translateY(-5px);
+}
+
+/* Modals */
+#resume-modal, #contact-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Inner Box */
+#resume-modal .bg-gray-700,
+#contact-modal .bg-gray-700 {
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #2D3748;
+}
+
+/* Button Styling */
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: #2B6CB0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3182CE;
+}
+
+/* Inputs and Text Areas */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background: #2D3748;
+    color: white;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px #4A5568;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Footer */
+footer {
+    background-color: #2D3748;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: #63B3ED;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #90CDF4;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    nav {
+        margin-top: 1rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    section {
+        padding: 3rem 1rem;
+    }
+}
+
+/* Style for the resume download box */
+.resume-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 30px auto;
+    width: 300px; /* Adjust width as needed */
+    background-color: #2D3748;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the download button */
+.resume-download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3182CE;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.resume-download-btn:hover {
+    background-color: #63B3ED;
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: #555;
+}

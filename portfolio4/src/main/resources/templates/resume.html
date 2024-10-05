@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Amit Mohan Shukla</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="bg-gray-900 text-white">
+    <header>
+        <h1>Amit Mohan Shukla</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/resume/resume.pdf" class="btn" download="Amit_Mohan_Shukla_Resume.pdf">Download My Resume</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>My Resume</h2>
+        <p>Click the button below to download my resume:</p>
+        <a href="/resume/resume.pdf" class="btn" download="Amit_Mohan_Shukla_Resume.pdf">Download My Resume</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Amit Mohan Shukla</p>
+    </footer>
+</body>
+</html>
